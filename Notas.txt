@@ -1,0 +1,19 @@
+//transpila de ES6 a ES5
+babel-preset-env
+
+//typeScript transpiler
+./node_modules/.bin/tsc index.ts
+// para que no transpile cuando hay error + el watch
+./node_modules/.bin/tsc index.ts --noEmitOnError -w
+
+
+//Webpack
+./node_modules/.bin/webpack index1.js index2.js -o index.min.js
+// si no seteas el modulo, por default es el de produccion
+./node_modules/.bin/webpack index1.js index2.js -o index.min.js --mode="production" -w
+
+
+//nodeExpressWebPackTS
+//dentro del package.json esta el build:dev
+// el de desarrollo toma webpack.config.js
+npm run build:dev
